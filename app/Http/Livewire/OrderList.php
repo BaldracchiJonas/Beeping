@@ -7,11 +7,15 @@ use App\Models\OrderLine;
 
 class OrderList extends Component
 {
+    public $orders;
+
+    public function mount()
+    {
+        $this->orders = OrderLine::with('order','product')->get();
+    }
+
     public function render()
     {
-
-        $orders = OrderLine::with('order','product')->get();
-
-        return view('livewire.order-list', compact('orders'));
+        return view('livewire.order-list');
     }
 }
