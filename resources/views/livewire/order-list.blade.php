@@ -15,12 +15,6 @@
         margin: 0 auto;
     }
 
-    thead th {
-        background-color: #333;
-        color: #fff;
-        padding: 10px;
-    }
-
     tbody tr:nth-child(even) {
         background-color: #f2f2f2;
     }
