@@ -22,10 +22,10 @@ Para Iniciar el Proyecto:
 
 Para testear el Job de coste total de ordenes:
 
-1. Correr el comando 'php artisan tinker' y en esa consola correr el comando 'App\Jobs\OrdersTotalCost::dispatch();' que va a guardar en la tabla 'jobs' el job que se va a ejecutar (Podemos chequear que se guardo en la base de datos con el comando 'DB::table('jobs')->get();')
-2. El job ahora se encuentra en la cola, para ejecutarlo manualmente podemos correr en una nueva consola el comando 'php artisan queue:work' y va a ejecutar el job que se encuentra en la cola. Este es un ejemplo de lo que va a aparecer en la consola:
+1. Correr el comando `php artisan tinker` y en esa consola correr el comando `App\Jobs\OrdersTotalCost::dispatch();` que va a guardar en la tabla 'jobs' el job que se va a ejecutar (Podemos chequear que se guardo en la base de datos con el comando `DB::table('jobs')->get();`)
+2. El job ahora se encuentra en la cola, para ejecutarlo manualmente podemos correr en una nueva consola el comando `php artisan queue:work` y va a ejecutar el job que se encuentra en la cola. Este es un ejemplo de lo que va a aparecer en la consola:
 PS C:\Users\Jonas\Desktop\Beeping> php artisan queue:work  
   2023-08-03 15:47:03 App\Jobs\OrdersTotalCost ....................................................................................................................................................... RUNNING
 Total cost of all orders: 5610.19
   2023-08-03 15:47:03 App\Jobs\OrdersTotalCost .................................................................................................................................................. 65.78ms DONE
-3. Podemos chequear que se ejecuto el job en la base de datos en la consola de 'php artisan tinker' con el comando 'DB::table('jobs')->get();' y ver que ya no existe ese job en la tabla 'jobs' porque ya se ejecuto
+3. Podemos chequear que se ejecuto el job en la base de datos en la consola de 'php artisan tinker' con el comando `DB::table('jobs')->get();` y ver que ya no existe ese job en la tabla 'jobs' porque ya se ejecuto
