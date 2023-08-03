@@ -4,14 +4,14 @@ Para Iniciar el Proyecto:
 2. Instalar las dependencias con el comando `composer install`
 3. Copiar el file `.env.example` con el comando `cp .env.example .env`
 4. Eliminar todas estas lineas en el .env que son para la coneccion en la base de datos, ya que nos vamos a conectar localmente con sqlite:
-    DB_CONNECTION=mysql
-    DB_HOST=127.0.0.1
-    DB_PORT=3306
-    DB_DATABASE=laravel
-    DB_USERNAME=root
-    DB_PASSWORD=
+    -DB_CONNECTION=mysql
+    -DB_HOST=127.0.0.1
+    -DB_PORT=3306
+    -DB_DATABASE=laravel
+    -DB_USERNAME=root
+    -DB_PASSWORD=
 5. Agregar esta linea en el .env para la coneccion en la base de datos:
-    DB_CONNECTION=sqlite
+    -DB_CONNECTION=sqlite
 6. Crear el archivo de base de datos con el comando `touch database/database.sqlite`
 7. Generar la key con el comando `php artisan key:generate`
 8. Cambiar la variable "QUEUE_CONNECTION=sync" en el .env a "QUEUE_CONNECTION=database" para setear como defecto todos los jobs que tengamos cuando hagan el dispacth van a pasar por esa coneccion
