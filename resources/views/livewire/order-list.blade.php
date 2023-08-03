@@ -1,19 +1,10 @@
 <div>
     <table>
-        <thead>
-            <tr>
-                <th>Order Reference</th>
-                <th>Customer Name</th>
-                <th>Total Cost</th>
-            </tr>
-        </thead>
+        <livewire:table-header :headerColumns=$headerColumns />
+
         <tbody>
-            @foreach ($orders as $order)
-            <tr>
-                <td>{{ $order->order->order_ref }}</td>
-                <td>{{ $order->order->customer_name }}</td>
-                <td>{{ number_format($order->qty * $order->product->cost, 2) }}</td>
-            </tr>
+            @foreach ($ordersArray as $order)
+                <livewire:table-row :row=$order />
             @endforeach
         </tbody>
     </table>
