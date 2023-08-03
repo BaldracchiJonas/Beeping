@@ -8,7 +8,7 @@ use App\Models\OrderLine;
 class OrderList extends Component
 {
     public $orders;
-    public $ordersArray;
+    public $ordersArray; //Array of the ordes so in the view we can loop through it and make it dynamic
     public $headerColumns = ['Order Reference','Customer Name','Total Cost'];
 
     public function mount()
