@@ -13,6 +13,8 @@
 <style>
     table {
         margin: 0 auto;
+        margin-top: 2%;
+        margin-bottom: 2%;
     }
 
     tbody tr:nth-child(even) {

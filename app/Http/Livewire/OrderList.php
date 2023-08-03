@@ -25,7 +25,7 @@ class OrderList extends Component
             return [
                 $orderLine->order->order_ref,
                 $orderLine->order->customer_name,
-                number_format($orderLine->qty * $orderLine->product->cost, 2),
+                '$ '.number_format($orderLine->qty * $orderLine->product->cost, 2),
             ];
         });
     }
